@@ -41,7 +41,23 @@ const LoginScreen = ({navigation}) => {
           />
         </View>
       ) : null}
-      <Text style={styles.text}>or</Text>
+      {Platform.OS === 'ios' ? (
+        <View>
+
+          <SocialButton
+            buttonTitle="Log In with Google"
+            btnType="google"
+            color="#de4d41"
+            backgroundColor="#f5e7ea"
+            onPress={() => navigation.navigate('MainTabScreen')}
+          />
+        </View>
+      ) : null}
+      <Text style={{ fontFamily: 'Kufam',
+            fontSize: 23,
+            marginTop:10,
+            marginBottom: 10,
+            color: '#051d5f',}}>or</Text>
       <FormInput
         labelValue={email}
         onChangeText={(userEmail) => setEmail(userEmail)}
@@ -69,7 +85,7 @@ const LoginScreen = ({navigation}) => {
       
       <FormButton
         buttonTitle="Sign In"
-        onPress={() => navigation.navigate('Weather')}
+        onPress={() => navigation.navigate('MainTabScreen')}
       />
 
 
@@ -97,7 +113,7 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
   },
   text: {
-    fontFamily: 'Kufam-SemiBoldItalic',
+    fontFamily: 'Kufam',
     fontSize: 28,
     marginBottom: 10,
     color: '#051d5f',
@@ -114,6 +130,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '500',
     color: '#2e64e5',
-    fontFamily: 'Lato-Regular',
+    fontFamily: 'Lato',
   },
 });

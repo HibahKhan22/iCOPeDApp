@@ -3,6 +3,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import DashboardScreen from './DashboardScreen';
+import Fontisto from 'react-native-vector-icons/Fontisto';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import ReportsScreen from './ReportsScreen';
 import AccountScreen from './AccountScreen';
 import SettingsScreen from './SettingsScreen';
@@ -128,16 +131,16 @@ const MainTabScreen = () => (
 
 <Tab.Navigator
 initialRouteName="Home"
-activeColor="#e91e63"
+activeColor="#43BFC7"
 barStyle={{ backgroundColor: 'white' }}
 >
 <Tab.Screen
   name="Home"
   component={HomeScreen}
   options={{
-    tabBarLabel: 'Home',
+    tabBarLabel: 'Dashboard',
     tabBarIcon: ({ color }) => (
-      <MaterialCommunityIcons name='home' color={color} size={26} />
+      <MaterialCommunityIcons name='view-dashboard' color={color} size={24} />
     ),
   }}
 />
@@ -145,9 +148,9 @@ barStyle={{ backgroundColor: 'white' }}
   name="Reports"
   component={ReportsScreen}
   options={{
-    tabBarLabel: 'Updates',
+    tabBarLabel: 'Reports',
     tabBarIcon: ({ color }) => (
-      <MaterialCommunityIcons name="home" color={color} size={26} />
+      <Ionicons name="document" color={color} size={24} />
     ),
   }}
 />
@@ -155,9 +158,9 @@ barStyle={{ backgroundColor: 'white' }}
   name="Account"
   component={AccountScreen}
   options={{
-    tabBarLabel: 'Profile',
+    tabBarLabel: 'Account',
     tabBarIcon: ({ color }) => (
-      <MaterialCommunityIcons name="home" color={color} size={26} />
+      <MaterialCommunityIcons name="account" color={color} size={24} />
     ),
   }}
 />
@@ -165,9 +168,9 @@ barStyle={{ backgroundColor: 'white' }}
   name="Settings"
   component={SettingsScreen}
   options={{
-    tabBarLabel: 'Home',
+    tabBarLabel: 'Settings',
     tabBarIcon: ({ color }) => (
-      <MaterialCommunityIcons name="home" color={color} size={26} />
+      <Fontisto name="player-settings" color={color} size={24} />
     ),
   }}
 />
@@ -175,9 +178,9 @@ barStyle={{ backgroundColor: 'white' }}
   name="More"
   component={MoreScreen}
   options={{
-    tabBarLabel: 'Home',
+    tabBarLabel: 'More',
     tabBarIcon: ({ color }) => (
-      <MaterialCommunityIcons name="home" color={color} size={26} />
+      <AntDesign name="pluscircle" color={color} size={24} />
     ),
   }}
 />

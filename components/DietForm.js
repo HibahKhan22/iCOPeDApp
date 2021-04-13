@@ -2,12 +2,12 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 
-const DietForm = ({ search, onSetSearch, onSubmit }) => {
+const DietForm = ({ search1, onSetSearch, onSubmit }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Enter city name and press search button</Text>
+      <Text style={styles.heading}>Enter Food name and press search button</Text>
       <View>
-        <TextInput style={styles.input} placeholder="Enter Food name..." value={search} onChangeText={(val) => onSetSearch(val)} />
+        <TextInput style={styles.input} placeholder="Enter Food name..." value={search1} onChangeText={(val) => onSetSearch(val)} />
         <Button title="Search" onPress={onSubmit} />
       </View>
     </View>

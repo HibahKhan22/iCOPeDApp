@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
+  SafeAreaView,
   View,
   Text,
   Image,
@@ -8,6 +9,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Linking,
+  ImageBackground,
 } from 'react-native';
 import {useTheme} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -15,22 +17,91 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {createAppContainer} from 'react-navigation';
 import HomeButton from '../components/HomeButton';
+import {SIZE} from '../utils/Dimentions';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
+Icon.loadFont();
 
 const HomeScreen = ({navigation}) => {
   const theme = useTheme();
+  const [currentDate, setCurrentDate] = useState('');
 
+  useEffect(() => {
+    var date = new Date().getDate(); //Current Date
+    var month = new Date().getMonth() + 1; //Current Month
+    var year = new Date().getFullYear(); //Current Year
+    var hours = new Date().getHours(); //Current Hours
+    var min = new Date().getMinutes(); //Current Minutes
+    var sec = new Date().getSeconds(); //Current Seconds
+    setCurrentDate(
+      date + '/' + month + '/' + year 
+      + ' ' + hours + ':' + min + ':' + sec
+    );
+  }, []);
+  
   return (
-    <ScrollView style={styles.container}>
-      <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
-      <View style={styles.sliderContainer}>
+    <SafeAreaView style={styles.container}>
+    <View style={{flexDirection:'row', height:50,backgroundColor: '#e6f2f2'}}>
+      <TouchableOpacity 
+        style={{
+           width: 50,
+           paddingLeft: SIZE.padding *2,
+           justifyContent: 'center'
+
+         }}
+        >
+       <MaterialCommunityIcons name='view-dashboard' color='#43BFC7' size={24} />
+      </TouchableOpacity>
+      <View style={{flex:1, alignItems:'center',justifyContent:'center'}}>
+        <View 
+           style={{
+             width: '70%',
+             height: '100%',
+             backgroundColor: '#e6f2f2',
+             alignItems:'center',
+             justifyContent:'center',
+             borderRadius: 10
+            }}
+          >
+          <Text style={{fontWeight: 'bold', color: '#43BFC7', fontSize: 18}}>Dashboard</Text>
+        </View>
+
+      </View>
+      <TouchableOpacity
+        style={{
+           width: 50,
+           paddingLeft: SIZE.padding *2,
+           justifyContent: 'center'
+         }}
+        >
+
+        </TouchableOpacity>
+    </View>
+    <View style={styles.sliderContainer}>
       <View style={styles.slide}>
-            <Image
+            <ImageBackground
               source={require('../assets/banner/Mountains-Area-1.png')}
               resizeMode="cover"
-              style={styles.sliderImage}
-            />
+              style={{ height: '100%',
+              width: '100%',
+              alignSelf: 'center',
+              borderRadius: 8}}
+            >
+               <View style={{flexDirection:'column', alignItems:'center',justifyContent:'center',}}>
+               <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row', marginTop:50, marginBottom:10}}>
+               <Text style={{fontWeight: 'bold', color: 'white', fontSize: 28,backgroundColor:'#43BFC7',opacity:1}}>Welcome</Text>
+               <Text style={{fontWeight: 'bold', color: 'white', fontSize: 28,backgroundColor:'#43BFC7',opacity:1}}>  Hibah Khan</Text>
+              </View>
+
+               <Text style={{fontWeight: 'bold', color: 'white', fontSize: 18,backgroundColor:'#43BFC7',opacity:1}}>{currentDate}</Text>
+              </View>
+            </ImageBackground>
+            
+       </View>
       </View>
-      </View>
+    <ScrollView style={styles.container}>
+      <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
+     
 
       <View style={styles.cardsWrapper}>
 
@@ -72,7 +143,7 @@ const HomeScreen = ({navigation}) => {
             </Text>
 
             <Text style={styles.cardDetailsLink}
-             onPress={() => Linking.openURL('http://google.com')}>
+             onPress={() => navigation.navigate('RemindersScreen')}>
              Read more
             </Text>
           </View>
@@ -86,32 +157,7 @@ const HomeScreen = ({navigation}) => {
           </View>
           </View>
 
-          <View style={styles.card}>
-        <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Reports</Text>
-            
-            <Text style={styles.cardDetails}>
-            Your report for the week 
-            of Feb 27, 2021 is good. 
-            </Text>
-
-            <Text style={styles.cardDetailsLink}
-             onPress={() => navigation.navigate('DietScreen')}>
-             Read more
-            </Text>
-          </View>
-
-          <View style={styles.cardImgWrapper}>
-            <Image
-              source={require('../assets/banner/Segment.png')}
-              resizeMode="cover"
-              style={styles.cardImg}
-            />
-          </View>
-          </View>
-
-
-          <View style={styles.card}>
+      <View style={styles.card}>
         <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Contact your iCOPeD Coach</Text>
             
@@ -123,7 +169,7 @@ const HomeScreen = ({navigation}) => {
 
             <HomeButton
             buttonTitle="Go to iCOPeD Coach"
-            onPress={() => navigation.navigate('Weather')}
+            onPress={() => navigation.navigate('CoachScreen')}
             />
           </View>
 
@@ -134,9 +180,9 @@ const HomeScreen = ({navigation}) => {
               style={styles.cardImg}
             />
           </View>
-          </View>
+        </View>
 
-          <View style={styles.card}>
+      <View style={styles.card}>
         <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Contact your Doctor</Text>
             
@@ -148,7 +194,7 @@ const HomeScreen = ({navigation}) => {
             
             <HomeButton
             buttonTitle="Go to my Doctor"
-            onPress={() => navigation.navigate('PollutionScreen')}
+            onPress={() => navigation.navigate('DoctorScreen')}
             />
            </View>
 
@@ -158,11 +204,12 @@ const HomeScreen = ({navigation}) => {
               resizeMode="cover"
               style={styles.cardImg}
             />
-          </View>
+           </View>
           </View>
 
       </View>
     </ScrollView>
+    </SafeAreaView>
   );
 };
 
@@ -255,7 +302,7 @@ const styles = StyleSheet.create({
   },
   cardInfo: {
     flex: 2,
-    padding: 10,
+    padding: 5,
     borderColor: '#ccc',
     borderWidth: 0,
     borderLeftWidth: 0,
@@ -300,7 +347,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#ffffff',
-    fontFamily: 'Lato-Regular',
+    fontFamily: 'Lato',
   },
   
 });

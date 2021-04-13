@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Alert, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { getWeather } from '../store/actions/weatherActions';
 import Form from '../components/Form';
 import Weather from '../components/Weather';

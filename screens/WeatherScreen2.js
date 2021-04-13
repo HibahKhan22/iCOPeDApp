@@ -336,7 +336,7 @@ const WeatherScreen2 = ({navigation}) => {
       fontSize: 18,
       fontWeight: 'bold',
       color: '#ffffff',
-      fontFamily: 'Lato-Regular',
+      fontFamily: 'Lato',
     },
     
   });

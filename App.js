@@ -16,6 +16,13 @@ import MainTabScreen from './screens/MainTabScreen';
 import WeatherScreen2 from './screens/WeatherScreen2';
 import PollutionScreen from './screens/PollutionScreen';
 import DietScreen from './screens/DietScreen';
+import RemindersScreen from './screens/RemindersScreen';
+import MedicationReminderScreen from './screens/MedicationReminderScreen';
+import ExerciseReminderScreen from './screens/ExerciseReminderScreen';
+import DietReminderScreen from './screens/DietReminderScreen';
+import DoctorScreen from './screens/DoctorScreen';
+import CoachScreen from './screens/CoachScreen';
+import CoachDetailScreen from './screens/CoachDetailScreen';
 
 
 const AppStack = createStackNavigator();
@@ -23,7 +30,7 @@ const AppStack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <AppStack.Navigator headerMode="none">
+      <AppStack.Navigator headerMode="none" initialRouteName={EnterScreen}>
           <AppStack.Screen name="EnterScreen" component={EnterScreen} />
           <AppStack.Screen name="Login" component={LoginScreen} />
           <AppStack.Screen name="Weather" component={WeatherScreen} />
@@ -31,6 +38,13 @@ const App = () => {
           <AppStack.Screen name="WeatherScreen2" component = {WeatherScreen2} />
           <AppStack.Screen name="PollutionScreen" component = {PollutionScreen} />
           <AppStack.Screen name="DietScreen" component = {DietScreen} />
+          <AppStack.Screen name="RemindersScreen" component = {RemindersScreen} />
+          <AppStack.Screen name="MedicationReminderScreen" component={MedicationReminderScreen}/>
+          <AppStack.Screen name ="ExerciseReminderScreen" component={ExerciseReminderScreen}/>
+          <AppStack.Screen name = "DietReminderScreen" component = {DietReminderScreen}/>
+          <AppStack.Screen name = "DoctorScreen" component = {DoctorScreen}/>
+          <AppStack.Screen name="CoachScreen" component ={CoachScreen}/>
+          <AppStack.Screen name = "CoachDetailScreen" component = {CoachDetailScreen}/>
         </AppStack.Navigator>
     </NavigationContainer>
   );

@@ -3,20 +3,20 @@ import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 
 import DietData from './DietData';
 
-const Diet = ({ loading, data, error }) => {
-  if (error) {
+const Diet = ({ loading1, data1, error1 }) => {
+  if (error1) {
     return <View style={styles.container}>
-      <Text style={styles.error}>{error}</Text>
+      <Text style={styles.error1}>{error1}</Text>
     </View>;
   }
 
-  if (!loading && !data) {
+  if (!loading1 && !data1) {
     return null;
   }
 
   return (
     <View style={styles.container}>
-      { loading ? <ActivityIndicator size="large" color="#00d1b2" /> : <DietData data={data} /> }
+      { loading1 ? <ActivityIndicator size="large" color="#00d1b2" /> : <DietData data1={data1} /> }
     </View>
   );
 };

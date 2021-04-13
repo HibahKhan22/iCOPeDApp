@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Alert, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
+import { getDiet } from '../store/actions/dietActions';
 import DietForm from '../components/DietForm';
 import Diet from '../components/Diet';
-import { getDiet } from '../store/actions/dietActions';
+
 
 const DietScreen = () => {
-  const [search, setSearch] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [search1, setSearch] = useState('');
+  const [loading1, setLoading] = useState(false);
   const dispatch = useDispatch();
-  const { data, error } = useSelector(state => state.weather);
+  const { data1, error1 } = useSelector(state => state.diet);
 
   const searchSubmitHandler = () => {
-    if (search === '') {
+    if (search1 === '') {
       return Alert.alert('Validation', 'Food name is required!', [{ text: 'OK' }]);
     }
 
     setLoading(true);
-    dispatch(getDiet(search, () => setLoading(false), () => setLoading(false)));
+    dispatch(getDiet(search1, () => setLoading(false), () => setLoading(false)));
     setSearch('');
     Keyboard.dismiss();
   };
@@ -25,8 +26,8 @@ const DietScreen = () => {
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.container}>
-        <DietForm search={search} onSetSearch={setSearch} onSubmit={searchSubmitHandler} />
-        <Diet loading={loading} data={data} error={error} />
+        <DietForm search1={search1} onSetSearch={setSearch} onSubmit={searchSubmitHandler} />
+        <Diet loading1={loading1} data1={data1} error1={error1} />
       </View>
     </TouchableWithoutFeedback>
   );

@@ -3,21 +3,16 @@ import { ScrollView, View, Text, StyleSheet, Image, Button, navigation} from 're
 import { useNavigation } from '@react-navigation/native';
 
 
-const DietData = ({ data }) => {
+const DietData = ({ data1 }) => {
   const navigation = useNavigation(); 
-  const fahrenheit = (data.main.temp * 1.8 - 459.67).toFixed(2);
-  const celsius = (data.main.temp - 273.15).toFixed(2);
-
- 
 
   return (
     <View style={styles.container} onStartShouldSetResponder={() => true}>
       <ScrollView style={styles.containerInner}>
-        <Text style={styles.title}>{data.name} - {data.sys.country}</Text>
-        <Text style={styles.title}>{data.coord.lat} - {data.coord.lon}</Text>
+        <Text style={styles.title}>{data1.text}</Text>
         <View style={styles.box}>
           <Text style={styles.boxLabel}>{data.weather[0].description}</Text>
-          <Image style={styles.image} source={{ uri: `http://openweathermap.org/img/wn/${data.weather[0].icon}.png` }} />
+          <Image style={styles.image} source={{ uri: date1.image }} />
         </View>
         <View style={styles.box}>
           <Text style={styles.boxLabel}>Temp</Text>
