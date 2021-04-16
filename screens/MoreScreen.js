@@ -14,6 +14,7 @@ import {
 import {useTheme} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {createAppContainer} from 'react-navigation';
 import HomeButton from '../components/HomeButton';
@@ -83,20 +84,26 @@ const  MoreScreen = ({navigation}) => {
 
     <View style={styles.cardsWrapper}>
       <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+        
+      <TouchableOpacity onPress={() => navigation.navigate('Weather')}>
         <View style={styles.card}>
         
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Weather</Text>
             <View style={styles.cardImgWrapper}>
             <Image
-              source={require('../assets/banner/Weatherman.png')}
+              source={require('../assets/banner/weather2.png')}
               resizeMode="cover"
               style={styles.cardImg}
             />
           </View>
             
           </View>
+       
         </View>
+      </TouchableOpacity>
+    
+    
 
         <View style={styles.card}>
         
@@ -104,7 +111,7 @@ const  MoreScreen = ({navigation}) => {
           <Text style={styles.cardTitle}>Educational</Text>
           <View style={styles.cardImgWrapper}>
           <Image
-            source={require('../assets/banner/Weatherman.png')}
+            source={require('../assets/banner/teach.png')}
             resizeMode="cover"
             style={styles.cardImg}
           />
@@ -122,7 +129,7 @@ const  MoreScreen = ({navigation}) => {
           <Text style={styles.cardTitle}>AI Assistance</Text>
           <View style={styles.cardImgWrapper}>
           <Image
-            source={require('../assets/banner/Weatherman.png')}
+            source={require('../assets/banner/ai.png')}
             resizeMode="cover"
             style={styles.cardImg}
           />
@@ -136,7 +143,7 @@ const  MoreScreen = ({navigation}) => {
           <Text style={styles.cardTitle}>Risk Calculator</Text>
           <View style={styles.cardImgWrapper}>
           <Image
-            source={require('../assets/banner/Weatherman.png')}
+            source={require('../assets/banner/risk.png')}
             resizeMode="cover"
             style={styles.cardImg}
           />
@@ -154,7 +161,7 @@ const  MoreScreen = ({navigation}) => {
           <Text style={styles.cardTitle}>Medication Storage</Text>
           <View style={styles.cardImgWrapper}>
           <Image
-            source={require('../assets/banner/Weatherman.png')}
+            source={require('../assets/banner/medic.png')}
             resizeMode="cover"
             style={styles.cardImg}
           />
@@ -168,7 +175,7 @@ const  MoreScreen = ({navigation}) => {
           <Text style={styles.cardTitle}>Weekly Quiz</Text>
           <View style={styles.cardImgWrapper}>
           <Image
-            source={require('../assets/banner/Weatherman.png')}
+            source={require('../assets/banner/quiz.png')}
             resizeMode="cover"
             style={styles.cardImg}
           />
@@ -180,13 +187,14 @@ const  MoreScreen = ({navigation}) => {
     </View>
     
       <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+      <TouchableOpacity onPress={() => navigation.navigate('DietScreen')}>
       <View style={styles.card}>
         
         <View style={styles.cardInfo}>
           <Text style={styles.cardTitle}>Diet Database</Text>
           <View style={styles.cardImgWrapper}>
           <Image
-            source={require('../assets/banner/Weatherman.png')}
+            source={require('../assets/banner/diet2.png')}
             resizeMode="cover"
             style={styles.cardImg}
           />
@@ -194,21 +202,23 @@ const  MoreScreen = ({navigation}) => {
           
         </View>
       </View>
+      </TouchableOpacity>
+      
+      <TouchableOpacity onPress={() => navigation.navigate('NewsScreen')}>
       <View style={styles.card}>
         
         <View style={styles.cardInfo}>
           <Text style={styles.cardTitle}>Health News</Text>
           <View style={styles.cardImgWrapper}>
-          <Image
-            source={require('../assets/banner/Weatherman.png')}
-            resizeMode="cover"
-            style={styles.cardImg}
-          />
+          <View style={{alignSelf:'center', alignContent:'center', justifyContent:'center'}}>
+          <Ionicons name="ios-newspaper-outline" color="#43BFC7" size={60} />
+          </View>
         </View>
-          
+      
         </View>
+         
       </View>
-
+      </TouchableOpacity>
     </View>
     
     
@@ -282,7 +292,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   card: {
-    height: 120,
+    height: 130,
     width:170,
     marginVertical: 10,
     shadowColor: '#999',

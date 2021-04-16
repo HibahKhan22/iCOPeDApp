@@ -1,4 +1,4 @@
-import { GET_DIET, SET_DIET_ERROR } from '../types';
+import { GET_DIET, SET_ERROR_DIET } from '../types';
 
 const initialState = {
   data: null,
@@ -12,7 +12,7 @@ export default (state = initialState, action) => {
         data: action.payload,
         error: '',
       };
-    case SET_DIET_ERROR:
+    case SET_ERROR_DIET:
       return {
         ...state,
         error: action.payload,

@@ -1,22 +1,26 @@
 import React from 'react';
 import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
-
 import DietData from './DietData';
 
-const Diet = ({ loading1, data1, error1 }) => {
+const Diet = ({ loading, data1, error1 }) => {
   if (error1) {
+    console.log("Dietjs:",error1);
+    console.log("Dietjs:",error1);
     return <View style={styles.container}>
-      <Text style={styles.error1}>{error1}</Text>
+      <Text style={styles.error}>{error1}</Text>
     </View>;
   }
 
-  if (!loading1 && !data1) {
+  if (!loading && !data1) {
+    console.log("Dietjs loading",loading);
+    console.log("Dietjs data",data1);
+    console.log("Dietjs:",error1);
     return null;
   }
-
+  console.log("diet data",data1);
   return (
     <View style={styles.container}>
-      { loading1 ? <ActivityIndicator size="large" color="#00d1b2" /> : <DietData data1={data1} /> }
+      { loading ? <ActivityIndicator size="large" color="#00d1b2" /> : <DietData data={data1} /> }
     </View>
   );
 };

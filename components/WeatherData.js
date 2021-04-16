@@ -1,6 +1,7 @@
 import React from 'react';
 import { ScrollView, View, Text, StyleSheet, Image, Button, navigation} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 
 const WeatherData = ({ data }) => {
@@ -12,41 +13,48 @@ const WeatherData = ({ data }) => {
 
   return (
     <View style={styles.container} onStartShouldSetResponder={() => true}>
-      <ScrollView style={styles.containerInner}>
+     
         <Text style={styles.title}>{data.name} - {data.sys.country}</Text>
-        <Text style={styles.title}>{data.coord.lat} - {data.coord.lon}</Text>
-        <View style={styles.box}>
+        
+        <View style={styles.cardInfo}>
           <Text style={styles.boxLabel}>{data.weather[0].description}</Text>
           <Image style={styles.image} source={{ uri: `http://openweathermap.org/img/wn/${data.weather[0].icon}.png` }} />
         </View>
-        <View style={styles.box}>
+        <View style={styles.cardInfo}>
           <Text style={styles.boxLabel}>Temp</Text>
           <View style={styles.tempContainer}>
             <Text style={styles.boxText}>{fahrenheit}&#8457;</Text>
             <Text style={styles.boxText}>{celsius}&#8451;</Text>
           </View>
         </View>
-        <View style={styles.box}>
-          <Text style={styles.boxLabel}>Humidity</Text>
-          <Text style={styles.boxText}>{data.main.humidity}%</Text>
-        </View>
-        <View style={styles.box}>
+        <View style={styles.cardInfo}>
+
+           
+           <Text style={styles.boxLabel}>Humidity</Text>
+           <Text style={styles.boxText}>{data.main.humidity}%</Text>
+           <View style ={{flexDirection:'row',marginBottom:5, alignItems:'center'}}>
+           </View>
+        
+ 
+           
+         </View>
+         <View style={styles.cardInfo}>
           <Text style={styles.boxLabel}>Pressure</Text>
           <Text style={styles.boxText}>{data.main.pressure}hPa</Text>
         </View>
-        <View style={styles.box}>
+        <View style={styles.cardInfo}>
           <Text style={styles.boxLabel}>Wind</Text>
           <Text style={styles.boxText}>{data.wind.speed} m/s</Text>
         </View>
-        <View style={styles.box}>
-          <Text style={styles.boxLabel}>Pollution information</Text>
+        <View style={styles.cardInfo}>
+          <Text style={styles.boxLabel}>Air Quality information</Text>
 
           <Button
-            title="Click here!"
+            title="More information"
             onPress={() => navigation.navigate('PollutionScreen')}
             />
         </View>
-      </ScrollView>
+      
     </View>
   );
 };
@@ -57,6 +65,7 @@ const styles = StyleSheet.create({
   },
   containerInner: {
     paddingHorizontal: 20,
+ 
   },
   title: {
     fontSize: 24,
@@ -91,6 +100,29 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignSelf: 'stretch',
   },
+  
+  cardInfo: {
+    flex: 0,
+    padding: 5,
+    borderColor: '#ccc',
+    borderWidth: 0,
+    borderLeftWidth: 0,
+    borderBottomRightRadius: 10,
+    borderTopRightRadius: 10,
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10,
+    backgroundColor: '#fff',
+    alignItems:'center',
+    justifyContent:'center',
+    width:'90%',
+    alignSelf:'center',
+    marginBottom:2,
+    marginTop:2,
+  },
+  cardTitle: {
+    padding: 15,
+    fontWeight: 'bold',}
+
 });
 
 export default WeatherData;

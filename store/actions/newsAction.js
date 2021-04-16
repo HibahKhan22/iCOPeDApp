@@ -1,7 +1,7 @@
-import { GET_DIET, SET_ERROR_DIET,GET_WEATHER, SET_ERROR } from '../types';
-import {diet_api_key2,diet_api_key, diet_app_id,openweathermap_api_key} from '../../config.json';
+import { GET_NEWS, SET_ERROR_NEWS} from '../types';
+import {news_api_key} from '../../config.json';
 
-export const getDiet = (food, onSuccess = () => {}, onError = () => {}) => {
+export const getNews = (food, onSuccess = () => {}, onError = () => {}) => {
   return async dispatch => {
     try {
       //const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${openweathermap_api_key}`);

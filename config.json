@@ -1,5 +1,7 @@
 {
     "openweathermap_api_key": "0035d565de4033d568a262c60d7b9620",
     "diet_api_key": "aab5d806a7c31cb693d3256ad4763592",
-    "die_app_id": "ad2db916"
+    "diet_app_id": "ad2db916",
+    "diet_api_key2": "b5d9caa8ba6c0fd054dc07867f54d351",
+    "news_api_key": "273600a84e9d45509cc76e58c970c157"
   }

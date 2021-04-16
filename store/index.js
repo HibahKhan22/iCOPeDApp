@@ -5,9 +5,9 @@ import dietReducer from './reducers/dietReducer';
 
 const rootReducer = combineReducers({
   weather: weatherReducer,
-  diet : dietReducer,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
+console.log(store.getState())
 
 export default store;

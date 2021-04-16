@@ -8,12 +8,10 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
 import EnterScreen from './screens/EnterScreen';
 import LoginScreen from './screens/LoginScreen';
 import WeatherScreen from './screens/WeatherScreen';
 import MainTabScreen from './screens/MainTabScreen';
-import WeatherScreen2 from './screens/WeatherScreen2';
 import PollutionScreen from './screens/PollutionScreen';
 import DietScreen from './screens/DietScreen';
 import RemindersScreen from './screens/RemindersScreen';
@@ -23,6 +21,7 @@ import DietReminderScreen from './screens/DietReminderScreen';
 import DoctorScreen from './screens/DoctorScreen';
 import CoachScreen from './screens/CoachScreen';
 import CoachDetailScreen from './screens/CoachDetailScreen';
+import NewsScreen from './screens/NewsScreen';
 
 
 const AppStack = createStackNavigator();
@@ -35,7 +34,7 @@ const App = () => {
           <AppStack.Screen name="Login" component={LoginScreen} />
           <AppStack.Screen name="Weather" component={WeatherScreen} />
           <AppStack.Screen name="MainTabScreen" component={MainTabScreen} />
-          <AppStack.Screen name="WeatherScreen2" component = {WeatherScreen2} />
+          <AppStack.Screen name="WeatherScreen" component = {WeatherScreen} />
           <AppStack.Screen name="PollutionScreen" component = {PollutionScreen} />
           <AppStack.Screen name="DietScreen" component = {DietScreen} />
           <AppStack.Screen name="RemindersScreen" component = {RemindersScreen} />
@@ -45,6 +44,7 @@ const App = () => {
           <AppStack.Screen name = "DoctorScreen" component = {DoctorScreen}/>
           <AppStack.Screen name="CoachScreen" component ={CoachScreen}/>
           <AppStack.Screen name = "CoachDetailScreen" component = {CoachDetailScreen}/>
+          <AppStack.Screen name = "NewsScreen" component = {NewsScreen}/>
         </AppStack.Navigator>
     </NavigationContainer>
   );

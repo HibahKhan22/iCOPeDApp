@@ -117,7 +117,7 @@ const HomeScreen = ({navigation}) => {
             </Text>
 
             <Text style={styles.cardDetailsLink}
-              onPress={() => navigation.navigate('WeatherScreen2')}>
+              onPress={() => navigation.navigate('WeatherScreen')}>
              Read more
             </Text>
           </View>
