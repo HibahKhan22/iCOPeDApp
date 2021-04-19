@@ -2,7 +2,6 @@ import React from 'react';
 import {getNews} from '../api/News';
 import { Image,Linking,TouchableOpacity,StyleSheet, Text, View, ActivityIndicator, Alert, ScrollView, Button, FlatList,route,navigation, SafeAreaView} from 'react-native';
 import { Component } from 'react';
-import {useTheme} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import {onchangelatlon} from '../components/WeatherData';
 import WeatherData from '../components/WeatherData';

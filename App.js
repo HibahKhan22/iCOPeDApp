@@ -22,7 +22,8 @@ import DoctorScreen from './screens/DoctorScreen';
 import CoachScreen from './screens/CoachScreen';
 import CoachDetailScreen from './screens/CoachDetailScreen';
 import NewsScreen from './screens/NewsScreen';
-
+import RiskCalculatorScreen from './screens/RiskCalculatorScreen';
+import hi from './screens/hi';
 
 const AppStack = createStackNavigator();
 
@@ -45,7 +46,9 @@ const App = () => {
           <AppStack.Screen name="CoachScreen" component ={CoachScreen}/>
           <AppStack.Screen name = "CoachDetailScreen" component = {CoachDetailScreen}/>
           <AppStack.Screen name = "NewsScreen" component = {NewsScreen}/>
-        </AppStack.Navigator>
+          <AppStack.Screen name = "RiskCalculatorScreen" component = {RiskCalculatorScreen}/>
+          <AppStack.Screen name = "hi" component = {hi} />
+       </AppStack.Navigator>
     </NavigationContainer>
   );
 }

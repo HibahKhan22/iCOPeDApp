@@ -137,6 +137,7 @@ const  MoreScreen = ({navigation}) => {
           
         </View>
       </View>
+      <TouchableOpacity onPress={() => navigation.navigate('RiskCalculatorScreen')}>
       <View style={styles.card}>
         
         <View style={styles.cardInfo}>
@@ -151,7 +152,7 @@ const  MoreScreen = ({navigation}) => {
           
         </View>
       </View>
-
+      </TouchableOpacity>
     </View>
      
       <View style={{flexDirection:'row', justifyContent:'space-between'}}>
