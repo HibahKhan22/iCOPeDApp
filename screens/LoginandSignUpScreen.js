@@ -14,6 +14,7 @@ import FormButton from '../components/FormButton';
 import SocialButton from '../components/SocialButton';
 //import {AuthContext} from '../navigation/AuthProvider';
 
+
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -28,10 +29,15 @@ const LoginScreen = ({navigation}) => {
       />
       <Text style={styles.text}>Log In</Text>
 
-      
+// This variables define interface of sign up and login screen 
+
+
+//Type of platform
+
       {Platform.OS === 'android' ? (
         <View>
-
+//Social button text definition, color, and type for an Android user
+        
           <SocialButton
             buttonTitle="Log In with Google"
             btnType="google"
@@ -41,9 +47,12 @@ const LoginScreen = ({navigation}) => {
           />
         </View>
       ) : null}
+//Type of platform
+
       {Platform.OS === 'ios' ? (
         <View>
-
+//Social button text definition, color, and type for an IOS user
+        
           <SocialButton
             buttonTitle="Log In with Google"
             btnType="google"
@@ -53,6 +62,9 @@ const LoginScreen = ({navigation}) => {
           />
         </View>
       ) : null}
+
+//Lines 62-89 describe text input interface for email and password input
+
       <Text style={{ fontFamily: 'Kufam',
             fontSize: 23,
             marginTop:10,
@@ -67,7 +79,7 @@ const LoginScreen = ({navigation}) => {
         autoCapitalize="none"
         autoCorrect={false}
       />
-
+          
       <FormInput
         labelValue={password}
         onChangeText={(userPassword) => setPassword(userPassword)}
@@ -75,6 +87,9 @@ const LoginScreen = ({navigation}) => {
         iconType="lock"
         secureTextEntry={true}
       />
+          
+// Commands from line 93-104 allow transiton between screens with a touch on screen
+          
        <TouchableOpacity
         style={styles.forgotButton}
         onPress={() => {}}>
@@ -97,6 +112,7 @@ const LoginScreen = ({navigation}) => {
 
 export default LoginScreen;
 
+//The rest of the code refers to CSS styling of screens 
 
 const styles = StyleSheet.create({
   container: {
