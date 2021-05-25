@@ -25,6 +25,8 @@ There were many tools we utilized to make iCOPeD possible. The two main language
 CSS and JS. The following frameworks we used were React Native and Bootstrap.
 
 <ul>Bootstrap</ul> 
+
+
 Bootstrap is an open-source CSS framework directed at responsive, mobile-first front-end development. It contains CSS- and JavaScript-based design templates for typography. We used bootstrap for enhanced design of operators and functional tools, such as forms, buttons, and other interface components. 
 
 
