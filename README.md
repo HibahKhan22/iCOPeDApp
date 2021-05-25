@@ -1,3 +1,8 @@
+# NOTICE
+
+For commentary of code, please so into the "PA MEDIA AND DESIGN" folder above. Thank you.
+
+
 # iCOPeDApp
 
 iCOPeD is a self-management mobile application for respiratory diseases. 
@@ -13,3 +18,10 @@ respiratory patients. Currently, respiratory diseases are the third leading caus
 worldwide and one of the hardest to manage. Chronic respiratory diseases are the leading cause 
 of unnecessary hospitalizations. In the age of telemedicine, it is essential to improve self-management 
 buy providing users with easy-to-access features to maintain and forecast their condition.
+
+# Software
+
+There were many tools we utilized to make iCOPeD possible. The two main languages we used for this code were 
+CSS and JS. The following frameworks we used were React Native and Bootstrap.
+
+<ul>Bootstrap</ul>
