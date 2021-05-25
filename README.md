@@ -28,4 +28,5 @@ CSS and JS. The following frameworks we used were React Native and Bootstrap.
 Bootstrap is an open-source CSS framework directed at responsive, mobile-first front-end development. It contains CSS- and JavaScript-based design templates for typography. We used bootstrap for enhanced design of operators and functional tools, such as forms, buttons, and other interface components. 
 
 <ul>React Native</ul> 
+
 React Native is an open-source mobile application framework created by Facebook, Inc. It is used to develop applications for Android, Android TV, iOS, macOS, tvOS, Web, Windows and UWP by enabling developers to use React's framework along with native platform capabilities. We used React Native to set up functional navigation and rendering of third-party apps.
