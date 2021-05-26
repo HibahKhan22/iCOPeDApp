@@ -39,6 +39,8 @@ const HomeScreen = ({navigation}) => {
     );
   }, []);
   
+// This variables define interface of sign up and login screen   
+  
   return (
     <SafeAreaView style={styles.container}>
     <View style={{flexDirection:'row', height:50,backgroundColor: '#e6f2f2'}}>
@@ -96,7 +98,9 @@ const HomeScreen = ({navigation}) => {
                <Text style={{fontWeight: 'bold', color: 'white', fontSize: 18,backgroundColor:'#43BFC7',opacity:1}}>{currentDate}</Text>
               </View>
             </ImageBackground>
-            
+
+   //Placement of images, text, colors, and interface elements from 44-98     
+
        </View>
       </View>
     <ScrollView style={styles.container}>
@@ -207,6 +211,8 @@ const HomeScreen = ({navigation}) => {
            </View>
           </View>
 
+//Placement and styling of text and objects in the cards on interfaces from 106-209
+
       </View>
     </ScrollView>
     </SafeAreaView>
@@ -214,6 +220,8 @@ const HomeScreen = ({navigation}) => {
 };
 
 export default HomeScreen;
+
+//The rest of the code refers to CSS styling of screens 
 
 const styles = StyleSheet.create({
   container: {
