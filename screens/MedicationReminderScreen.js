@@ -71,7 +71,9 @@ const MedicationReminderScreen = ({navigation}) => {
      
        <View>
         <Text style={{margin:20, fontSize:18}}>
-
+          
+// General and header element and text code from 29-73
+          
           Upcoming
         </Text>
 
@@ -98,9 +100,7 @@ const MedicationReminderScreen = ({navigation}) => {
 
         </View>
 
-
-
-
+// Various cards and their their elements within them from 80-99
 
         <View style={styles.cardInfo3}>
       <AntDesign name='pluscircle' color='#43BFC7' size={50} />
@@ -116,6 +116,8 @@ const MedicationReminderScreen = ({navigation}) => {
 };
 
 export default MedicationReminderScreen;
+
+//The rest of the code refers to CSS styling of screens 
 
 const styles = StyleSheet.create({
   container: {
