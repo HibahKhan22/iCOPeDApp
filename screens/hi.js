@@ -378,3 +378,4 @@ const pickerSelectStyles = StyleSheet.create({
     paddingRight: 30, // to ensure the text is never behind the icon
   },
 });
+// This is a great example of a coding readme file!
