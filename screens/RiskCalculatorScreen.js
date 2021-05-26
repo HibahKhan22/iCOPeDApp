@@ -29,7 +29,7 @@ class RiskCalculatorScreen extends Component {
         result:null,
       }
 
-    
+  // Defined variables for the interface from 16-29  
 
    
       async componentDidMount() {
@@ -66,7 +66,9 @@ class RiskCalculatorScreen extends Component {
          //this.result = await model.predict(this.data);
          
         }     
-       
+         
+// if or else loops for model predicting of data in the interface from 35-64
+         
     }
   render() {
   
@@ -161,7 +163,9 @@ class RiskCalculatorScreen extends Component {
         onChangeText={(weight) => this.setState({weight})}
         value={this.state.weight.value}
         placeholder="176"
-     
+
+     // Overall styling and content placement of interface from 90-165
+
       />
       </View>
       <View style={{flexDirection:'column',backgroundColor:'white', width:'80%',alignSelf:'center',borderBottomRightRadius: 10,
@@ -237,6 +241,10 @@ class RiskCalculatorScreen extends Component {
     )
   }
 }
+//Setup of various columns in the interphase from 170-235
+
+
+//Remaining code is CSS for the interface styling 
 
 const styles = StyleSheet.create({
     container: {
