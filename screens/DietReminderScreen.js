@@ -34,7 +34,8 @@ const DietReminderScreen = ({navigation}) => {
            width: 50,
            paddingLeft: SIZE.padding *2,
            justifyContent: 'center'
-
+               
+//Variables ro define interface from 29-36
          }}
          onPress = {() => navigation.goBack()}
         >
@@ -55,6 +56,8 @@ const DietReminderScreen = ({navigation}) => {
           <Text style={{fontWeight: 'bold', color: '#43BFC7', fontSize: 18}}>Diet</Text>
         </View>
 
+// Styling of header and arrow on upper interphase from 43-56
+
       </View>
       <TouchableOpacity
         style={{
@@ -74,6 +77,8 @@ const DietReminderScreen = ({navigation}) => {
 
           Upcoming
         </Text>
+
+// Styling of color opacity on interface objectsfrom 70-79
 
        </View>
       <View style={styles.cardsWrapper}>
@@ -98,11 +103,8 @@ const DietReminderScreen = ({navigation}) => {
 
         </View>
 
+// Compilation of text on the card on the interface from 84-99
 
-
-
-
-      
       <View style={styles.cardInfo3}>
       <AntDesign name='pluscircle' color='#43BFC7' size={50} />
     
@@ -116,6 +118,8 @@ const DietReminderScreen = ({navigation}) => {
 };
 
 export default DietReminderScreen;
+
+//The rest of the code refers to CSS styling of screens
 
 const styles = StyleSheet.create({
   container: {
