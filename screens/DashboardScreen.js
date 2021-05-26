@@ -21,6 +21,8 @@ const DashboarScreen = ({navigation}) => {
     );
 };
 
+//Variable define interface from 13 to 18
+
 export default DashboarScreen;
 
 const styles = StyleSheet.create({
