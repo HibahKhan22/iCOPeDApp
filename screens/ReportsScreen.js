@@ -41,7 +41,9 @@ const  ReportsScreen= ({navigation}) => {
            width: 50,
            paddingLeft: SIZE.padding *2,
            justifyContent: 'center'
-
+               
+// Variables used for the parts of the interface from 36-43
+               
          }}
         >
         <Ionicons name="document" color='#43BFC7' size={24} />
@@ -77,7 +79,9 @@ const  ReportsScreen= ({navigation}) => {
         <Text style={{fontSize:20}}>February 7 - February 14, 2021</Text>
       </View>
     </View>
-      
+
+    // Overall formatting for the whole interphase from 49-80
+
     <ScrollView style={styles.container}>
       <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
      
@@ -223,6 +227,7 @@ const  ReportsScreen= ({navigation}) => {
   
 </View>
 
+// All card formatting and text information on interface from 85-230
 
        </View>
       
@@ -278,7 +283,11 @@ const  ReportsScreen= ({navigation}) => {
   );
 };
 
+// All button abilities and styling from 236-282
+
 export default ReportsScreen;
+
+// Remaining code is for CSS styling of the screens
 
 const styles = StyleSheet.create({
   container: {
