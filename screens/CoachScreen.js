@@ -42,6 +42,8 @@ const CoachScreen = ({navigation}) => {
            paddingLeft: SIZE.padding *2,
            justifyContent: 'center'
 
+// Variables to define interface parts from 36-43                
+               
          }}
          onPress = {() => navigation.goBack()}
         >
@@ -61,6 +63,8 @@ const CoachScreen = ({navigation}) => {
           >
           <Text style={{fontWeight: 'bold', color: '#43BFC7', fontSize: 18}}>My Coach</Text>
         </View>
+
+//Styling of the font and arrows from 51-64
 
       </View>
       <TouchableOpacity
@@ -83,6 +87,8 @@ const CoachScreen = ({navigation}) => {
         </Text>
         </View>
      
+//Adjusted opacity and styling of text on the interface from 69-86
+
       <View style={{flexDirection:'column'}}>
       <TouchableOpacity onPress={() => navigation.navigate('CoachDetailScreen')}>
        <View style={styles.cardsWrapper}> 
@@ -110,7 +116,8 @@ const CoachScreen = ({navigation}) => {
         <Text style={{fontSize:20}}>Iqbal Khan</Text>
       </View>
     </View>
-         
+        
+//Enhancing backround color and placement of of general objects on the interface from 92-116
   
             
           </View>
@@ -143,6 +150,8 @@ const CoachScreen = ({navigation}) => {
         <View style={styles.cardsWrapper}> 
         <View  style={styles.card}>
  
+///Specific margin adjusting from 129-151
+          
    <View style={styles.cardInfo}>
     
    <View style={styles.sliderContainer}>
@@ -234,7 +243,7 @@ const CoachScreen = ({navigation}) => {
 </View>
 </View>
   
-
+//Specific card contwnt and adjustment from 155-244
      
    </View>
    
@@ -253,6 +262,8 @@ const CoachScreen = ({navigation}) => {
 };
 
 export default CoachScreen;
+
+//Remaining code consists of CSS styling of screens
 
 const styles = StyleSheet.create({
   container: {
