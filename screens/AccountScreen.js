@@ -35,7 +35,9 @@ const AccountScreen = ({navigation}) => {
            width: 50,
            paddingLeft: SIZE.padding *2,
            justifyContent: 'center'
-
+             
+// The variables are defined for interface of account screen 
+               
          }}
         >
        <MaterialCommunityIcons name="account" color="#43BFC7" size={24} />
@@ -53,6 +55,8 @@ const AccountScreen = ({navigation}) => {
           >
           <Text style={{fontWeight: 'bold', color: '#43BFC7', fontSize: 18}}>Account</Text>
         </View>
+
+//Styling of text font, color, and alignment 
 
       </View>
       <TouchableOpacity
@@ -80,7 +84,9 @@ const AccountScreen = ({navigation}) => {
         <Text style={{fontSize:20}}>Hibah Khan, 43</Text>
       </View>
     </View>
-      
+   
+//Styling of margins and padding
+
     <ScrollView style={styles.container}>
       <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
      
@@ -133,7 +139,9 @@ const AccountScreen = ({navigation}) => {
             <Text style={styles.cardDetails}>Phone Number:</Text>
             <Text style={styles.cardDetails2}> (570)-651-3178</Text>
             </View>
-            
+          
+//Styling of user information on the card interface
+
           </View>
       
       </View>
@@ -146,6 +154,8 @@ const AccountScreen = ({navigation}) => {
 };
 
 export default AccountScreen;
+
+//The rest of the code refers to CSS styling of screens 
 
 const styles = StyleSheet.create({
   container: {
