@@ -34,6 +34,8 @@ const DietScreen = ({navigation})  => {
          paddingLeft: SIZE.padding *2,
          justifyContent: 'center'
 
+ //Defining of variables for interface from 28-35             
+             
        }}
        onPress = {() => navigation.goBack()}
       >
@@ -54,6 +56,8 @@ const DietScreen = ({navigation})  => {
         <Text style={{fontWeight: 'bold', color: '#43BFC7', fontSize: 18}}>Diet Database</Text>
       </View>
 
+//Styling of upper header and arrow on interface from 43-56
+
     </View>
     <TouchableOpacity
       style={{
@@ -63,6 +67,8 @@ const DietScreen = ({navigation})  => {
        }}
       >
 
+//Overall padding and dimensions of the given interface
+        
       </TouchableOpacity>
   </View>
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -74,6 +80,8 @@ const DietScreen = ({navigation})  => {
     </SafeAreaView>
   );
 };
+
+//Search bar and keyboard appearance from 72-80
 
 const styles = StyleSheet.create({
   container: {
