@@ -19,6 +19,7 @@ const Dots = ({selected}) => {
         />
     );
 }
+///Adjustment of screen dimensions and color from 9-17
 
 const Skip = ({...props}) => (
     <TouchableOpacity
@@ -87,6 +88,8 @@ const EnterScreen = ({navigation}) => {
 };
 
 export default EnterScreen;
+
+// //The rest of the code refers to CSS styling of screens from 51-83
 
 const styles = StyleSheet.create({
   container: {
