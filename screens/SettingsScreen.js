@@ -35,7 +35,9 @@ const SettingsScreen = ({navigation}) => {
            width: 50,
            paddingLeft: SIZE.padding *2,
            justifyContent: 'center'
-
+               
+// Variables for the parts of the interface from 30-37
+               
          }}
         >
 
@@ -74,6 +76,8 @@ const SettingsScreen = ({navigation}) => {
         <Text style={{marginTop:20,marginLeft:15, fontSize:18, textAlign:'left'}}>
          Account
         </Text>
+
+// Overall styling and placement of features from 44-77
 
     </View>
       <View style={styles.cardsWrapper}>
@@ -242,7 +246,11 @@ const SettingsScreen = ({navigation}) => {
   );
 };
 
+// Several card formatting and text placement from 83-247
+
 export default SettingsScreen;
+
+// Remaining code is CSS for styling the general interface 
 
 const styles = StyleSheet.create({
   container: {
