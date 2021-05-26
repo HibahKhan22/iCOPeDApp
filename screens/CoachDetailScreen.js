@@ -65,7 +65,7 @@ const CoachDetailScreen = ({navigation}) => {
          }}
         >
           
-// Adjustment of content and padding size and placement and style     
+// Adjustment of content and padding size and placement and style from 30-64
           
         </TouchableOpacity>
     </View>
@@ -89,7 +89,7 @@ const CoachDetailScreen = ({navigation}) => {
       </View>
     </View>
 
-// //Styling of text and background alignment, size, and color
+// //Styling of text and background alignment, size, and color from 70-90
 
     <ScrollView style={styles.container}>
       <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
@@ -147,7 +147,7 @@ const CoachDetailScreen = ({navigation}) => {
       
       </View>
 
-// Above is the interface card with all information placed in text
+// Styling of interface card with all information placed in text from 94-143
 
       </View>
     </ScrollView>
