@@ -46,7 +46,9 @@ const WeatherScreen = ({navigation}) => {
            width: 50,
            paddingLeft: SIZE.padding *2,
            justifyContent: 'center'
-
+               
+// Variables set for elements of the interface from 41-48
+               
          }}
          onPress = {() => navigation.goBack()}
         >
@@ -90,6 +92,11 @@ const WeatherScreen = ({navigation}) => {
     </SafeAreaView>
   );
 };
+
+//Overall styling of the interphase and search bar from 53-88
+
+
+// A little bit of CSS code for interface styling remaining
 
 const styles = StyleSheet.create({
   container: {
