@@ -39,8 +39,8 @@ componentDidMount (){
 
      }, error => {
         Alert.alert('Error', 'Error!');
-     }
-     
+    }
+                   
      )
 
 
@@ -69,7 +69,9 @@ return(
            width: 50,
            paddingLeft: SIZE.padding *2,
            justifyContent: 'center'
-
+               
+// Variables to define parts of the interface from 34-71
+               
          }}
          onPress = {() => this.props.navigation.goBack()}
         >
@@ -98,7 +100,9 @@ return(
            justifyContent: 'center'
          }}
         >
-
+         
+// Styling of caption area of interphase elements from 76-99
+         
         </TouchableOpacity>
     </View>
    
@@ -306,7 +310,9 @@ return(
     </View>
 
      </ScrollView>
-      
+
+ // Information on various cards and their styling and text from 118-308  
+
     </View>
    </SafeAreaView>
  
@@ -319,7 +325,8 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#e6f2f2',
    
-      
+//The rest of the code refers to CSS styling of screens
+     
     },
     cardDetails: {
         padding: 0,
