@@ -86,6 +86,8 @@ const FeedStack = ({navigation}) => (
   </Stack.Navigator>
 );
 
+//Various header styling and text from 19-88
+
 const MessageStack = ({navigation}) => (
   <Stack.Navigator>
     <Stack.Screen name="Messages" component={MessagesScreen} />
@@ -126,6 +128,7 @@ const ProfileStack = ({navigation}) => (
   </Stack.Navigator>
 );
 
+//Chat section of interphase and its elements from 91-124
 
 const MainTabScreen = () => (
 
@@ -185,6 +188,8 @@ barStyle={{ backgroundColor: 'white' }}
   }}
 />
 </Tab.Navigator>
-);
+);]
+
+// Various tabs in itnerphase and their components and options included in them from 134-190
 
 export default MainTabScreen;
