@@ -40,7 +40,9 @@ const DoctorScreen = ({navigation}) => {
          }}
          onPress = {() => navigation.goBack()}
         >
-         
+     
+//Varibales to define the interpface from 31-38
+          
        <Ionicons name='arrow-back-sharp' color='#43BFC7' size={30} />
       </TouchableOpacity>
       
@@ -57,6 +59,8 @@ const DoctorScreen = ({navigation}) => {
           >
           <Text style={{fontWeight: 'bold', color: '#43BFC7', fontSize: 18}}>My Doctor</Text>
         </View>
+
+//Styling of upper header and black arrow on interface from 46-57
 
       </View>
       <TouchableOpacity
@@ -88,7 +92,8 @@ const DoctorScreen = ({navigation}) => {
     <ScrollView style={styles.container}>
       <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
      
-
+//The opacity and color of the interface and txt, along with margins are mentioned from 65-88
+        
       <View style={styles.cardsWrapper}>
 
         <View style={styles.card}>
@@ -122,6 +127,7 @@ const DoctorScreen = ({navigation}) => {
       
       </View>
 
+// Each of the separate cards and the features and text appearing on them from 97-123
 
       </View>
     </ScrollView>
@@ -130,6 +136,8 @@ const DoctorScreen = ({navigation}) => {
 };
 
 export default DoctorScreen;
+
+//The rest of the code refers to CSS styling of screens
 
 const styles = StyleSheet.create({
   container: {
