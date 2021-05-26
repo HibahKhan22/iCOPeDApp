@@ -35,6 +35,8 @@ const ExerciseReminderScreen = ({navigation}) => {
            paddingLeft: SIZE.padding *2,
            justifyContent: 'center'
 
+// Variables to define elements in the interface from 29-36               
+               
          }}
          onPress = {() => navigation.goBack()}
         >
@@ -63,7 +65,9 @@ const ExerciseReminderScreen = ({navigation}) => {
            justifyContent: 'center'
          }}
         >
-
+          
+//Setting of opacity, colors and text of upper part of the interface from 44-58
+          
         </TouchableOpacity>
     </View>
     <ScrollView style={styles.container}>
@@ -98,10 +102,7 @@ const ExerciseReminderScreen = ({navigation}) => {
 
         </View>
 
-
-
-
-
+// Setting of overall color and the elements within the cards on the interface from 73-99
 
         <View style={styles.cardInfo3}>
       <AntDesign name='pluscircle' color='#43BFC7' size={50} />
@@ -116,6 +117,8 @@ const ExerciseReminderScreen = ({navigation}) => {
 };
 
 export default ExerciseReminderScreen;
+
+//The rest of the code refers to CSS styling of screens 
 
 const styles = StyleSheet.create({
   container: {
