@@ -40,6 +40,8 @@ const HomeScreen = ({navigation}) => {
     );
   }, []);
   
+ // variables for the time measurements used in the interface from 31-37 
+  
   return (
     <SafeAreaView style={styles.container}>
     <View style={{flexDirection:'row', height:50,backgroundColor: '#e6f2f2'}}>
@@ -48,7 +50,9 @@ const HomeScreen = ({navigation}) => {
            width: 50,
            paddingLeft: SIZE.padding *2,
            justifyContent: 'center'
-
+               
+// Other variables for styling of the interface from 45-52
+               
          }}
          onPress = {() => navigation.goBack()}
         >
@@ -99,7 +103,9 @@ const HomeScreen = ({navigation}) => {
                <Text style={{fontWeight: 'bold', color: 'white', fontSize: 18,backgroundColor:'#43BFC7',opacity:1}}>{currentDate}</Text>
               </View>
             </ImageBackground>
-            
+
+        // Overall styling of the interface and images included from 45-105  
+
        </View>
       </View>
     <ScrollView style={styles.container}>
@@ -216,7 +222,11 @@ const HomeScreen = ({navigation}) => {
   );
 };
 
+// Card styling and text on interface from 111-214
+
 export default HomeScreen;
+
+// Remaining code is CSS for interface styling 
 
 const styles = StyleSheet.create({
   container: {
