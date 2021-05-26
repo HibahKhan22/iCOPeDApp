@@ -69,7 +69,9 @@ componentDidMount (){
         renderItem={({item}) => {
           return (
             <SafeAreaView>
-
+           
+// Variabled defined for the interpase components from 18 to 71
+           
 <View style={{flexDirection:'row', height:50,backgroundColor: '#e6f2f2'}}>
       <TouchableOpacity 
         style={{
@@ -105,7 +107,9 @@ componentDidMount (){
            justifyContent: 'center'
          }}
         >
-
+         
+//Overall styling and text of caption of interface from 75 to 107
+         
         </TouchableOpacity>
     </View> 
             
@@ -175,10 +179,13 @@ componentDidMount (){
       />
     </View>
 
+// Format of cards and elements within them from 166-169
    
   );
 }
 }
+
+//The rest of the code refers to CSS styling of screens
 
 const styles = StyleSheet.create({
   container: {
