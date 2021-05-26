@@ -34,8 +34,8 @@ const CoachDetailScreen = ({navigation}) => {
         style={{
            width: 50,
            paddingLeft: SIZE.padding *2,
-           justifyContent: 'center'
-
+           justifyContent: 'center'          
+               
          }}
          onPress = {() => navigation.goBack()}
         >
@@ -64,7 +64,9 @@ const CoachDetailScreen = ({navigation}) => {
            justifyContent: 'center'
          }}
         >
-
+          
+// Adjustment of content and padding size and placement and style     
+          
         </TouchableOpacity>
     </View>
     <View style={styles.sliderContainer}>
@@ -86,7 +88,9 @@ const CoachDetailScreen = ({navigation}) => {
         <Text style={{fontSize:20}}>Iqbal Khan</Text>
       </View>
     </View>
-      
+
+// //Styling of text and background alignment, size, and color
+
     <ScrollView style={styles.container}>
       <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
      
@@ -143,12 +147,15 @@ const CoachDetailScreen = ({navigation}) => {
       
       </View>
 
+// Above is the interface card with all information placed in text
 
       </View>
     </ScrollView>
     </SafeAreaView>
   );
 };
+
+//Below are the rest of the code for CSS styling of screens 
 
 export default CoachDetailScreen;
 
