@@ -40,6 +40,8 @@ const  MoreScreen = ({navigation}) => {
     );
   }, []);
   
+  // This variables define the various time measurements in the interface from 30-36 
+
   return (
     <SafeAreaView style={styles.container}>
     <View style={{flexDirection:'row', height:50,backgroundColor: '#e6f2f2'}}>
@@ -49,6 +51,8 @@ const  MoreScreen = ({navigation}) => {
            paddingLeft: SIZE.padding *2,
            justifyContent: 'center'
 
+  // This variables define the various elements in the interface from 45-53      
+               
          }}
         >
        <AntDesign name="pluscircle" color="#43BFC7" size={24} />
@@ -75,7 +79,9 @@ const  MoreScreen = ({navigation}) => {
            justifyContent: 'center'
          }}
         >
-
+          
+// Overall text and margin formatting from 58-79
+          
         </TouchableOpacity>
     </View>
    <ScrollView style={styles.container}>
@@ -215,7 +221,9 @@ const  MoreScreen = ({navigation}) => {
           <Ionicons name="ios-newspaper-outline" color="#43BFC7" size={60} />
           </View>
         </View>
-      
+
+// Overall card formats and elements on them in the interphase from 85-222
+
         </View>
          
       </View>
@@ -230,6 +238,8 @@ const  MoreScreen = ({navigation}) => {
 };
 
 export default MoreScreen;
+
+//The rest of the code refers to CSS styling of screens
 
 const styles = StyleSheet.create({
   container: {
