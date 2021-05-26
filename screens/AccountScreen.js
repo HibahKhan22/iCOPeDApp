@@ -36,7 +36,7 @@ const AccountScreen = ({navigation}) => {
            paddingLeft: SIZE.padding *2,
            justifyContent: 'center'
              
-// The variables are defined for interface of account screen 
+// The variables are defined for interface of account screen from 30-37
                
          }}
         >
@@ -56,7 +56,7 @@ const AccountScreen = ({navigation}) => {
           <Text style={{fontWeight: 'bold', color: '#43BFC7', fontSize: 18}}>Account</Text>
         </View>
 
-//Styling of text font, color, and alignment 
+//Styling of text font, color, and alignment from 43-53
 
       </View>
       <TouchableOpacity
@@ -85,7 +85,7 @@ const AccountScreen = ({navigation}) => {
       </View>
     </View>
    
-//Styling of margins and padding
+//Styling of margins and padding from 71-85
 
     <ScrollView style={styles.container}>
       <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
@@ -140,7 +140,7 @@ const AccountScreen = ({navigation}) => {
             <Text style={styles.cardDetails2}> (570)-651-3178</Text>
             </View>
           
-//Styling of user information on the card interface
+//Styling of user information on the card interface from 90-140
 
           </View>
       
