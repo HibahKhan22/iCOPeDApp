@@ -32,7 +32,9 @@ const RemindersScreen= ({navigation}) => {
            width: 50,
            paddingLeft: SIZE.padding *2,
            justifyContent: 'center'
-
+               
+// variables for the interface parts from 27 to 34
+               
          }}
          onPress = {() => navigation.goBack()}
         >
@@ -61,7 +63,9 @@ const RemindersScreen= ({navigation}) => {
            justifyContent: 'center'
          }}
         >
-
+          
+// General formatting ofthe inteface from 39-63
+          
         </TouchableOpacity>
     </View>
     <ScrollView style={styles.container}>
@@ -129,12 +133,7 @@ const RemindersScreen= ({navigation}) => {
           </View>
       </TouchableOpacity>
   
-
-
-
-
-
-
+//Styling of cards and the text that goes respectively from 75-134
 
       </View>
     </ScrollView>
@@ -143,6 +142,8 @@ const RemindersScreen= ({navigation}) => {
 };
 
 export default RemindersScreen;
+
+// Rest of the code refers to the CSS styling 
 
 const styles = StyleSheet.create({
   container: {
